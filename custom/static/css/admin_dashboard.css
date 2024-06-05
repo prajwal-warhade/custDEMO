@@ -1,0 +1,172 @@
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+
+#topbar {
+    background: #54fcbe1d;
+    height: 40px;
+    font-size: 14px;
+    transition: all 0.5s;
+    z-index: 996;
+}
+
+#topbar.topbar-scrolled {
+    top: -40px;
+}
+
+#topbar .contact-info a {
+    line-height: 1;
+    color: #474747;
+    transition: 0.3s;
+    font-family: "Helvetica Neue", ;
+}
+
+#topbar .contact-info a:hover {
+    color: #1977cc;
+}
+
+#topbar .contact-info i {
+    color: #1977cc;
+    padding-right: 4px;
+    margin-left: 15px;
+    line-height: 0;
+}
+
+#topbar .contact-info i:first-child {
+    margin-left: 0;
+}
+
+#topbar .social-links a {
+    color: #437099;
+    padding-left: 15px;
+    display: inline-block;
+    line-height: 1px;
+    transition: 0.3s;
+}
+
+#topbar .social-links a:hover {
+    color: #082843;
+}
+
+#topbar .social-links a:first-child {
+    border-left: 0;
+}
+
+
+/*-----------------------------
+
+General styling for the container
+
+------------------------------------------ */
+
+.admin-dashboard {
+    background-color: #6eeeac72;
+    /* Light background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.admin-title {
+    font-weight: bold;
+    
+    transition: color 0.3s;
+    /* Smooth color transition on hover */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+}
+
+/* Hover effect for the admin title */
+.admin-title:hover {
+    color: #486d95;
+    /* Change color on hover (blue in this case) */
+}
+
+/* Styling for the header */
+.admin-dashboard h1 {
+    color: #16416c;
+    /* Dark color for the header */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Styling for the horizontal rule */
+.admin-dashboard hr {
+    border: 0;
+    height: 2px;
+    background: #343a40;
+    /* Dark color to match the header */
+    margin: 20px 0;
+}
+
+
+/* Styling for the horizontal rule */
+.admin-dashboard hr {
+    border: 0;
+    height: 2px;
+    background: #262626;
+    /* Dark color to match the header */
+    margin: 20px 0;
+}
+
+/* Styling for the card container */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    /* Space cards evenly */
+    flex-wrap: wrap;
+    /* Ensure cards wrap on smaller screens */
+    gap: 10px;
+    margin-top: 20px;
+    /* Add gap between cards */
+}
+
+/* Styling for each card */
+.card {
+    background-color: #ffffff;
+    /* White background */
+    border: 1px solid #ddd;
+    /* Light grey border */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    /* Allow cards to grow equally */
+    max-width: 400px;
+    /* Set max width for each card */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth hover effect */
+}
+
+.card-img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* Styling for card title */
+.card-title {
+    color: #343a40;
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+/* Styling for card text */
+.card-text {
+    color: #6c757d;
+    font-size: 0.4em;
+}
+
+/* Hover effect for each card */
+.card:hover {
+    transform: translateY(-15px);
+    /* Move up slightly */
+    box-shadow: 0 9px 15px rgba(0, 0, 0, 0.2);
+    /* Darker shadow on hover */
+    background-color: #f1f1f1;
+}

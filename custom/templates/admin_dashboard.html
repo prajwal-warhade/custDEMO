@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+
+
+<div class="container-fluid admin-dashboard" style="margin-top:3%;width:100%">
+  <div class="container-fluid">
+    <h1>ADMIN DASHBOARD</h1>
+    <hr />
+
+  </div>
+</div>
+<div class="card-container">
+  <div class="card" onclick="location.href='#';">
+    <a href="#" title="management icons">
+      <img src="https://img.icons8.com/ios/50/000000/management.png" alt="Management Icon" class="card-img">
+    </a>
+    <h2 class="card-title">User Management</h2>
+    <p class="card-text">Manage users data</p>
+  </div>
+  <div class="card" onclick="location.href='#';">
+    <a href="#" title="product icons">
+      <img src="https://img.icons8.com/ios/50/000000/product.png" alt="Product Icon" class="card-img">
+    </a>
+    <h2 class="card-title">Product Management</h2>
+    <p class="card-text">Manage products for users</p>
+  </div>
+  <div class="card" onclick="location.href='#';">
+    <a href="#" title="vendor icons">
+      <img src="https://img.icons8.com/ios/50/000000/supplier.png" alt="Vendor Icon" class="card-img">
+    </a>
+    <h2 class="card-title">Vendor Management</h2>
+    <p class="card-text">Manage vendor data</p>
+  </div>
+  <div class="card" onclick="location.href='#';">
+    <a href="#" title="logs icons">
+      <img src="https://img.icons8.com/ios/50/000000/report-card.png" alt="Logs Icon" class="card-img">
+    </a>
+    <h2 class="card-title">Reports and Logs</h2>
+    <p class="card-text">Reports and logs management</p>
+  </div>
+</div>
+
+<script>
+  function toggleSidebar(show) {
+    const sidebar = document.getElementById('sidebar');
+    if (show) {
+      sidebar.style.left = '0'; // Slide in from left
+    } else {
+      sidebar.style.left = '-250px'; // Slide out to left
+    }
+  }
+
+</script>
+{% endblock %}
