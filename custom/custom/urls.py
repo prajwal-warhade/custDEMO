@@ -5,4 +5,5 @@ urlpatterns = [
     
     path('admin/',include('cust_admins.urls')),
     path('dev-admin/', admin.site.urls),
+    path('',include('dashboard.urls')),
 ]

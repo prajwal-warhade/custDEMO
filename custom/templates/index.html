@@ -26,13 +26,14 @@
   <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"><!-- icons toplbar -->
   <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
   <!-- Template Main CSS File -->
-  <link href="{% static 'css/styles.css' %}" rel="stylesheet">
-  <link href="{% static 'css/admin_dashboard.css' %}" rel="stylesheet">
+  <link href="{% static 'css/Styles.css' %}" rel="stylesheet">
+  <link href="{% static 'css/Admin_dashboard.css' %}" rel="stylesheet">
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel='stylesheet' type='text/css' href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
   <link rel='stylesheet' type='text/css' href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
@@ -49,30 +50,117 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">customization@blackpurl.com</a>
-        <i class="bi bi-phone"></i> +91 0712-444-555
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
+        <i class="bi bi-phone"></i> +91 1234567890
       </div>
       <div class="d-none d-lg-flex social-links align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
-
     </div>
   </div>
 
-  <!-- ======= Header ======= -->
+
+  <!-- ======= Header Section ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
+      <h1 class="logo me-auto"><a href="index.html">Customization.com</a></h1>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{% url 'admin_dashboard' %}">Home</a></li>
+          <li class="dropdown"><a href="#"><span style="text-decoration: none;">Category</span> </a>
+            <ul>
+              <li><a href="#">Automobiles</a></li>
+              <li><a href="#">Clothing</a></li>
+
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#">Users</a></li>
+          <li><a class="nav-link scrollto" href="#">All Order</a></li>
+
+        </ul>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= Header Section Ends ======= -->
+
+  {% block body %}
+
+
+  {% endblock %}
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Customization.com</h3>
+            <p>
+              Balewadi HighStreet <br>
+              Pune 41101<br>
+              India <br><br>
+              <strong>Phone:</strong> +91 1234567890<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Customization.com Our commetment to Your requirements.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
     </div>
 
-    {% block body %}
+    <div class="container d-md-flex py-4">
 
-
-    {% endblock %}
-<script src="{% static 'js/main.js' %}"></script>
-    <script src="{% static 'js/scripts.js' %}"></script>
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Customization.com </span></strong>. All Rights Reserved
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 
 </html>
