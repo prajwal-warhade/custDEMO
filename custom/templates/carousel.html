@@ -5,16 +5,20 @@
 <section id="about" class="about">
     <div class="container-fluid">
         <div class="row align-items-center mx-2">
-            <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+            <div
+                class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
             </div>
-            <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <div
+                class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
                 <h3>About Customization.com</h3>
-                <p>Give your customers a superior shopping experience. Realistic 3D product visuals, intuitive design tools
+                <p>Give your customers a superior shopping experience. Realistic 3D product visuals, intuitive design
+                    tools
                     and rewarding user journeys.</p>
                 <div class="icon-box">
                     <div class="icon"><i class="bx bx-edit"></i></div>
                     <h4 class="title"><a href="">How to design your own idea ..?</a></h4>
-                    <p class="description">Design your own idea by using our website and order from our best retail shop</p>
+                    <p class="description">Design your own idea by using our website and order from our best retail shop
+                    </p>
                 </div>
                 <div class="icon-box">
                     <div class="icon"><i class="bx bx-package"></i></div>
@@ -29,6 +33,23 @@
             </div>
         </div>
     </div>
+</section>
+<section>
+    <h3 style="text-align:center;">Our Products For you</h3>
+    {% for x in prod %}
+    <div class="card">
+        <img src="{{ x.pimage.url }}" alt="{{ x.name }}" />
+        <div class="card-body">
+            <h5 class="card-title">{{ x.name }}</h5>
+            <p class="card-text">{{ x.pdetails }}</p>
+            <p class="original-price">Original Price: ₹320</p>
+            <p class="discount">Discount: 20%</p>
+            <p class="new-price">New Price: ₹{{ x.price }}</p>
+            <button href="#" class="button-59" role="button">Add To Cart</button>
+        </div>
+    </div>
+    {% endfor %}
+
 </section>
 <!-- End About Section -->
 

@@ -1,7 +1,24 @@
 from django.shortcuts import render
+from users.models import UserProfile
+from products.models import Product 
+
 
 def Home(request):
-    return render(request,'carousel.html')
+
+    if request.user.is_authenticated:
+        user_profile = UserProfile.objects.filter(user=request.user).first()
+        products = Product.objects.filter(is_active=True)
+        context = {
+            'prod': products,
+            'data1': user_profile
+        }
+    else:
+        products = Product.objects.filter(is_active=True)
+        context = {'prod': products}
+    return render(request,'carousel.html',context)
+
+
+
 
 def About(request):
     return render(request,'about.html')

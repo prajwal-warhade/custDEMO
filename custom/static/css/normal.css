@@ -202,6 +202,105 @@
     visibility: visible;
 }
 
+
+.Profile_image {
+    width: 30px;
+    border-radius: 40%;
+    cursor: pointer;
+    margin-left: 400px;
+}
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: -550px;
+    width: 300px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 400px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    max-width: 30px; /* Adjust max-width as needed */
+    padding: 10px; /* Add padding to adjust size */
+    
+}
+.profile h4{
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+
+.Profile_image {
+    margin-right: 10px;
+    
+}
+
+
+.sub-menu {
+    background-color: #cfcfed;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 3%;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #959393;
+    margin: 10px 0 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info h3 {
+    font-weight: 400;
+}
+
+.user-info img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 35px;
+}
+
+
+.sub-menu-link img {
+    width: 25px;
+    margin-left: 10px;
+
+}
+
+.sub-menu-link p {
+    width: 100%;
+    margin-left: -90px;
+    margin-top: 7px;
+
+}
+
+.sub-menu-link span {
+    font-size: 23px;
+    transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span {
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+    font-weight: bold;
+}
+
+
 @media (max-width: 1366px) {
     .navbar .dropdown .dropdown ul {
         left: -90%;
@@ -218,7 +317,7 @@
 --------------------------------------------------------------*/
 
 section {
-    padding: 200px 0;
+    padding: 25px 0;
     overflow: hidden;
 }
 
@@ -269,6 +368,9 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about {
+    margin-top: 10%;
+}
 
 .about .icon-boxes h4 {
     font-size: 18px;
@@ -337,9 +439,9 @@ section {
 
 .about .video-box {
     background: url("https://cdn.pixabay.com/photo/2015/05/31/11/32/work-791218_1280.jpg") center center no-repeat;
-    background-size:contain;
+    background-size: contain;
     min-height: 500px;
-    
+
 }
 
 .about .play-btn {
@@ -420,6 +522,7 @@ section {
         transform: scale(0.6, 0.6);
         opacity: 1;
     }
+
     100% {
         transform: scale(1, 1);
         opacity: 0;
@@ -431,6 +534,7 @@ section {
         transform: scale(0.6, 0.6);
         opacity: 1;
     }
+
     100% {
         transform: scale(1, 1);
         opacity: 0;
@@ -517,7 +621,7 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
     text-decoration: none;
-    color: #1977cc;
+    color: #4da3ff;
 }
 
 #footer .footer-newsletter {
@@ -589,7 +693,66 @@ section {
 }
 
 #footer .social-links a:hover {
-    background: #1c84e3;
+    background: #96c1ea;
     color: #fff;
     text-decoration: none;
+}
+
+
+/*--------------------------------------------------------------
+# Product card
+--------------------------------------------------------------*/
+.card {
+    width: 18rem;
+    margin: 20px;
+
+
+}
+
+.card-link {
+    text-decoration: none;
+    color: black;
+}
+
+.button-59 {
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #490a29;
+    box-sizing: border-box;
+    color: #490a29;
+    cursor: pointer;
+    display: inline-flex;
+    fill: #490a29;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: -.8px;
+    line-height: 24px;
+    min-width: 140px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-59:focus {
+    color: #171e29;
+}
+
+.button-59:hover {
+    border-color: hsl(158, 93%, 21%);
+    color: hsl(158, 98%, 17%);
+    fill: hsl(158, 51%, 39%);
+}
+
+.button-59:active {
+    border-color: rgb(78, 29, 78);
+    color: rgb(94, 23, 78);
+    fill: rgb(221, 63, 168);
 }

@@ -1,0 +1,14 @@
+Priority Symbols
+
+@-----First Priority 
+#-----second Priority 
+&-----third Priority 
+------if task compleated write----[completed]
+*------Marker for work
+----------------------------------------------------------------------Write Priority HERE----------------------------------------------------------------
+
+@--Logout function not working for
+> need to add if else function for profile 
+
+# Product add in cart and and make payment 
+
