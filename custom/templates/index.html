@@ -28,8 +28,8 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
 
   <!-- Template Main CSS File -->
-  <link href="{% static 'css/normal.css' %}" rel="stylesheet">
-  <link href="{% static 'css/admin-login.css' %}" rel="stylesheet">
+  <link href="{% static 'css/Main.css' %}" rel="stylesheet">
+  <link href="{% static 'css/admin_login.css' %}" rel="stylesheet">
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -46,8 +46,8 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
-        <i class="bi bi-phone"></i> +91 1234567890
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">Customization@help.com</a>
+        <i class="bi bi-phone"></i> +91 0712 9922903
       </div>
       <div class="d-none d-lg-flex social-links align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -66,8 +66,8 @@
       <h1 class="logo me-auto"><a href="index.html">Customization.com</a></h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="{% url 'admin_dashboard' %}">Home</a></li>
-          <li class="dropdown"><a href="#"><span style="text-decoration: none;">Category</span> </a>
+          <li><a class="nav-link scrollto active" href="{% url 'home' %}">Home</a></li>
+          <li class="dropdown"><a href="#" style="text-decoration: none;">Category</a>
             <ul>
               <li><a href="#">Automobiles</a></li>
               <li><a href="#">Clothing</a></li>
@@ -77,40 +77,57 @@
           <li><a class="nav-link scrollto" href="#">Users</a></li>
           <li><a class="nav-link scrollto" href="#">All Order</a></li>
 
+
+          {% if not user.is_authenticated %}
+          <li><a class="nav-link scrollto" href="{% url 'sign_in' %}">Login</a></li>
+          {% endif %}
         </ul>
 
-        <div class="profile"onclick="togglMenu()">
-          <img src="{% static 'images/user.png' %}" class="Profile_image" >
-          <h4>Welcome</h4>
-        </div>
-
-
-        <div class="sub-menu-wrap" id="subMenu">
-          <div class="sub-menu">
-            <div class="user-info">
-              <img src="{% static 'images/user.png' %}" alt="">
-              <h3>Prajwal</h3>
-            </div>
-            <hr>
-
-            <a href="#" class="sub-menu-link">
-              <img src="{% static 'images/profile.png' %}">
-              <p>Edit Profile</p>
-              <span>></span>
-            </a>
-            <a href="#" class="sub-menu-link">
-              <img src="{% static 'images/setting.png' %}">
-              <p>settings</p>
-              <span>></span>
-            </a>
-            <a href="{% url 'logout' %}" class="sub-menu-link">
-              <img src="{% static 'images/logout.png' %}">
-              <p>Logout</p>
-              <span>></span>
-            </a>
+        {% if user.is_authenticated %}
+        <div class="profile" onclick="toggleMenu()">
+          <div class="profile-info">
+            {% if user.userprofile.profile_picture %}
+            <img src="{{ user.userprofile.profile_picture.url }}" alt="{{ user.username }}'s profile picture"
+              class="Profile_image">
+            {% else %}
+            <img src="{% static 'images/user2.png' %}" alt="Default profile picture" class="Profile_image">
+            {% endif %}
             
           </div>
-        </div>
+
+
+          {% endif %}
+
+
+
+
+
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+
+                <h4>Welcome to Customization {{ user.userprofile.email }}</h4>
+              </div>
+              <hr>
+
+              <a href="#" class="sub-menu-link">
+                <img src="{% static 'images/profile.png' %}">
+                <p>Edit Profile</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="{% static 'images/setting.png' %}">
+                <p>settings</p>
+                <span>></span>
+              </a>
+              <a href="{% url 'logout' %}" class="sub-menu-link">
+                <img src="{% static 'images/logout.png' %}">
+                <p>Logout</p>
+                <span>></span>
+              </a>
+
+            </div>
+          </div>
 
       </nav>
     </div>
@@ -189,7 +206,7 @@
       </div>
     </div>
   </footer><!-- End Footer -->
-  <script src="{% static 'js/Scripts.js' %}"></script>
+  <script src="{% static 'js/Script.js' %}"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>

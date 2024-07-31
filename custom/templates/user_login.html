@@ -1,17 +1,24 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block body %}
+
+{% if errmsg %}
+    <div class="alert alert-danger" role="alert">
+        <p style="color: rgb(255, 0, 0);">{{ errmsg }}</p>
+    </div>
+{% endif %}
+
 <section class="container1 forms">
     <div class="form login">
         <div class="form-content">
             <header>Login</header>
-            <form action="{% url 'sign_in' %}" method="POST">
+            <form action="{% url 'sign_in' %}" method="post">
                 {% csrf_token %}
                 <div class="field input-field">
-                    <input type="text" placeholder="Username" name="username" class="input">
+                    <input type="text" placeholder="Username" name="username" class="input" required>
                 </div>
                 <div class="field input-field">
-                    <input type="password" placeholder="Password" name="user_password" class="password">
+                    <input type="password" placeholder="Password" name="user_password" class="password" required>
                     <i class='bx bx-hide eye-icon'></i>
                 </div>
                 <div class="form-link">
@@ -21,6 +28,7 @@
                     <button type="submit">Login</button>
                 </div>
             </form>
+
             <div class="form-link">
                 <span>Don't have an account? <a href="{% url 'sign_up' %}" class="link signup-link">Signup</a></span>
             </div>
@@ -39,12 +47,12 @@
             </a>
         </div>
     </div>
-    <!-- Signup Form -->
+  
     <!-- Signup Form -->
     <div class="form signup">
         <div class="form-content">
             <header>Signup</header>
-            <form action="{% url 'sign_up' %}" method="POST">
+            <form action="{% url 'sign_up' %}" method="post">
                 {% csrf_token %}
                 <div class="field input-field">
                     <input type="email" placeholder="Email" name="user_email" class="input" required>
@@ -54,13 +62,10 @@
                 </div>
                 <div class="field input-field">
                     <input type="password" placeholder="Create password" name="user_password" class="password" required>
-                   
                 </div>
                 <div class="field input-field">
-                    <input type="password" placeholder="Confirm password" name="user_password_confirm" class="password"
-                        required>
-                        
-                    </div>
+                    <input type="password" placeholder="Confirm password" name="user_password_confirm" class="password" required>
+                </div>
                 <div class="field button-field">
                     <button type="submit">Signup</button>
                 </div>
@@ -70,7 +75,6 @@
             </div>
         </div>
     </div>
-
 </section>
 
 {% endblock %}

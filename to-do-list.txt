@@ -1,14 +1,36 @@
-Priority Symbols
+------------------------------Priority Symbols
 
 @-----First Priority 
 #-----second Priority 
 &-----third Priority 
 ------if task compleated write----[completed]
 *------Marker for work
-----------------------------------------------------------------------Write Priority HERE----------------------------------------------------------------
+// use this for any writng work for persnal use 
+---------------------------------------Write Priority HERE----------------------------------------------------------------
 
 @--Logout function not working for
-> need to add if else function for profile 
+> need to add if else function for profile [completed]
 
-# Product add in cart and and make payment 
+# Product add in cart and and make payment option Use API for payment option
+@ login and logout bug fixes[completed]
+
+# Error message on login page [Completed]
+
+--------------------------------------------writing or explaination about changes----------------------------------------
+
+> Change Login, logout and Register Views code for Handle GET POST request .
+>>> changes made : Function based view to Class based view
+>>> Reason : A fuction can handle either Get or Post request
+but user can send any request so i made class based view inside that view i made saparate 2 functions for
+which handles Post request or Get Request.
+
+
+
+
+
+
+
+---------------------------------Please delete your code after use. ----------------
+
+
 

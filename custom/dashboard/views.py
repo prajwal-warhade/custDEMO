@@ -6,7 +6,7 @@ from products.models import Product
 def Home(request):
 
     if request.user.is_authenticated:
-        user_profile = UserProfile.objects.filter(user=request.user).first()
+        user_profile = UserProfile.objects.get(user=request.user)
         products = Product.objects.filter(is_active=True)
         context = {
             'prod': products,
